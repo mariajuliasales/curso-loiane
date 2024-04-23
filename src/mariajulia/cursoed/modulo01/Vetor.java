@@ -8,9 +8,14 @@ public class Vetor {
 		this.elementos = new String[capacidade];
 	}
 	
-	public String[] getElementos() {
+	public void adicionarElemento(String elemento) {
+		for(int i = 0; i < this.elementos.length; i++) {
+			if (this.elementos[i] == null) {
+				this.elementos[i] = elemento;
+				break;
+			}
+		}
 		
-		return this.elementos;
 	}
 
 }

@@ -1,6 +1,6 @@
 package mariajulia.cursoed.modulo01;
 
-public class Main {
+public class Aula02 {
 	
 	public static void main(String[]args) {
 		
@@ -8,11 +8,7 @@ public class Main {
 	
 		int parada = 2;
 		parada = 0;
-		
-		int tamanhoNovoVetor= novoVetor.getElementos().length;
-		
-		System.out.println(tamanhoNovoVetor);
-		
+						
 	}
 
 }
