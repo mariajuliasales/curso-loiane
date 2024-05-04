@@ -46,7 +46,39 @@ public class Vetor {
 		
 		return false;
 	}
-
+/*	
+	public boolean adicionar(int posicao, String elemento) {
+		
+		if(!(posicao>=0 && posicao<tamanho)) {
+			throw new IllegalArgumentException("Posição inválida");
+		}
+		
+		for(int i = this.tamanho ; i > posicao; i--) {
+			this.elementos[i] = this.elementos[i-1];
+		}
+		
+		this.elementos[posicao] = elemento;
+		this.tamanho++;
+		
+		return true;
+	}
+*/
+	public boolean adicionar(int posicao, String elemento) {
+		
+		if(!(posicao>=0 && posicao<tamanho)) {
+			throw new IllegalArgumentException("Posição inválida");
+		}
+		
+		for(int i = this.tamanho - 1; i >= posicao; i--) {
+			this.elementos[i+1] = this.elementos[i];
+		}
+		
+		this.elementos[posicao] = elemento;
+		this.tamanho++;
+		
+		return true;
+	}
+	
 	public int tamanho() {
 		return this.tamanho;
 	}
@@ -124,4 +156,5 @@ public class Vetor {
 		}
 		return -1;
 	}
+	
 }
